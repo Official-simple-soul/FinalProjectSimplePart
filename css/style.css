@@ -11,6 +11,17 @@
     --secondary: #669E00;
 }
 
+.fa-chevron-down {
+  /* transform: rotate(0deg); */
+  transition: 300ms linear;
+}
+
+.fa-chevron-down.open {
+  /* transform: rotate(180deg); */
+  transition: 300ms linear;
+}
+
+
 .card {
     overflow: hidden !important;
 }
@@ -50,6 +61,10 @@ input:focus {
 .latest-article-size{
     font-size: 10px
 }
+
+.latest-article-size a p:hover{
+    color: var(--primary);
+}
 .zoom {
     transition: all 1.3s ease-in-out;
     overflow: hidden;
@@ -81,5 +96,93 @@ img:hover {
 #footer {
     background-color: #031633;
 }
+
+#nav-bar ul li a, #footer ul li a {
+    transition: all 0.5s ease-in-out;
+}
+#nav-bar ul li a:hover, #footer ul li a:hover {
+    transform: scale3d(1.1, 1.1, 1.1);
+    cursor: pointer;
+    color: var(--secondary) !important;
+}
+
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    transition: all 0.3s;
+  }
+  
+  .popup-content {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 8px #666;
+    transition: all 0.5s 0.2s;
+    z-index: 400;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .kodecamp-img {
+    width: 1rem;
+  }
+
+  /* notification styling */
+  .popup-notify {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 8%;
+    left: 15%;
+    /* transition: all 2.5s ease; */
+  }
+  
+  .overlay-notify {
+    background-color: rgba(0, 0, 0, 0.205);
+    backdrop-filter: blur(px);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    /* transition: all 2.3s; */
+  }
+  
+  .popup-content-notify {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 8px #666;
+    /* transition: all 2.5s ease; */
+    z-index: 400;
+  }
+  
+  .hidden-notify {
+    display: none;
+    /* transition: all 2.5s ease; */
+  }
 
 
